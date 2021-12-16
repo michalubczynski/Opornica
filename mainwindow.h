@@ -37,6 +37,12 @@ private slots:
 
     void on_rozlacz_button_clicked();
 
+    void on_camera_0_check_stateChanged(int arg1);
+
+    void on_camera_1_check_stateChanged(int arg1);
+
+    void on_camera_2_check_stateChanged(int arg1);
+
 private:
     Ui::MainWindow *ui;
     QList<QSerialPortInfo> dev;
@@ -48,12 +54,22 @@ private:
     QString serialBuffer;
 
 
-    // CAMERA
+    // CAMERA 1
     QCamera *m_Camera1;
     QCameraViewfinder *m_CameraViewfinder1;
     QCameraImageCapture *m_CameraImageCapture1;
     QVBoxLayout *m_layout1;
+    // CAMERA 2
+    QCamera *m_Camera2;
+    QCameraViewfinder *m_CameraViewfinder2;
+    QCameraImageCapture *m_CameraImageCapture2;
+    QVBoxLayout *m_layout2;
 
+    // CAMERA 3
+    QCamera *m_Camera3;
+    QCameraViewfinder *m_CameraViewfinder3;
+    QCameraImageCapture *m_CameraImageCapture3;
+    QVBoxLayout *m_layout3;
     bool checkCameraAvailability();
 
 
