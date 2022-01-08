@@ -208,3 +208,27 @@ void MainWindow::on_camera_2_check_stateChanged(int arg1){
 }
 
 
+
+void MainWindow::on_pushButton_2_clicked()
+{
+    if(this->arduino->isOpen()){
+    this->arduino->write("l");
+    }
+    else{
+        this->add_monitor_log("Port nie jest otwarty!");
+        return;
+    }
+}
+
+
+void MainWindow::on_pushButtonIncrease_clicked()
+{
+    if(this->arduino->isOpen()){
+    this->arduino->write("p");
+    }
+    else{
+        this->add_monitor_log("Port nie jest otwarty!");
+        return;
+    }
+}
+
